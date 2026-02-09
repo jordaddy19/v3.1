@@ -1,64 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Selection</title>
-    <link rel="stylesheet" href="css/food.css" />
-  </head>
-  <body>
-    <div id="foodquestion">
-      <b>What food would you like to eat?</b>
+    <style>
+        body {
+            background-color: #fff0f5;
+            text-align: center;
+            font-family: 'Comic Sans MS', sans-serif;
+            padding: 20px;
+        }
+        #foodquestion {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #d32f2f;
+        }
+        .food-selection {
+            display: grid;
+            /* Changed to 200px to give the labels more room */
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .food-item {
+            transition: transform 0.3s ease;
+        }
+        .food-item:hover {
+            transform: scale(1.05);
+        }
+        .food-item img {
+            width: 100%;
+            max-width: 180px;
+            height: 180px;
+            border-radius: 15px;
+            object-fit: cover;
+            border: 3px solid #ffb6c1;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .button {
+            background-color: #ff69b4;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div id="foodquestion"><b>What food would you like to eat? 🦀</b></div>
+    
+    <div class="food-selection">
+        <div class="food-item">
+            <img src="food/burgers.jpeg" alt="Burgers" />
+            <label><br><input type="checkbox" name="food" /> Burgers & Chicken</label>
+        </div>
+        <div class="food-item">
+            <img src="food/pasta.jpeg" alt="pasta" />
+            <label><br><input type="checkbox" name="food" /> Pasta</label>
+        </div>
+        <div class="food-item">
+            <img src="food/sushi.jpeg" alt="sushi" />
+            <label><br><input type="checkbox" name="food" /> Sushi</label>
+        </div>
+        <div class="food-item">
+            <img src="food/seafood.jpeg" alt="seafood" />
+            <label><br><input type="checkbox" name="food" /> Seafood Boil</label>
+        </div>
     </div>
 
-    <div class="food-selection">
-      <div class="food-item">
-        <img src="food/burgers.jpeg" alt="Burgers, fries and fried chicken" />
-        <label
-          ><input
-            type="checkbox"
-            name="food"
-            value="Burgers, fries and fried chicken"
-          />
-          burgers and fried chicken</label
-        >
-      </div>
-      <div class="food-item">
-        <img src="food/seafood-boil.jpeg" alt="Seafood Boil" />
-        <label
-          ><input type="checkbox" name="food" value="Seafood Boil" /> Seafood Boil</label
-        >
-      </div>
-      <div class="food-item">
-        <img src="food/koreanfood.jpeg" alt="koreanfood" />
-        <label
-          ><input type="checkbox" name="food" value="Korean food" /> korean
-          food</label
-        >
-      </div>
-      <div class="food-item">
-        <img src="food/pasta.jpeg" alt="pasta" />
-        <label><input type="checkbox" name="food" value="pasta" /> pasta</label>
-      </div>
-      <div class="food-item">
-        <img src="food/pizza.jpeg" alt="pizza" />
-        <label><input type="checkbox" name="food" value="pizza" /> pizza</label>
-      </div>
-      <div class="food-item">
-        <img src="food/salad.jpeg" alt="salad" />
-        <label><input type="checkbox" name="food" value="salad" /> salad</label>
-      </div>
-      <div class="food-item">
-        <img src="food/steak.jpeg" alt="steak" />
-        <label><input type="checkbox" name="food" value="steak" /> steak</label>
-      </div>
-      <div class="food-item">
-        <img src="food/sushi.jpeg" alt="sushi" />
-        <label><input type="checkbox" name="food" value="sushi" /> sushi</label>
-      </div>
-    </div>
+    <br>
     <button class="button" onclick="location.href='dessert.html'">
-      Continue or bonsai will blow raspberries at you 
+        Continue or Bonsai will blow raspberries at you
     </button>
-  </body>
+</body>
 </html>
