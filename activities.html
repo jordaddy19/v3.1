@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activities</title>
-    <link rel="stylesheet" href="css/activities.css" />
-  </head>
-  <body>
+    <style>
+        body {
+            background: #0a0a0a; color: white;
+            font-family: 'Comic Sans MS', cursive;
+            display: flex; flex-direction: column; align-items: center;
+            padding-top: 50px;
+        }
+        #activityquestion { font-size: 2rem; margin-bottom: 30px; text-shadow: 0 0 10px #ff4d4d; }
+        
+        .activity-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .activity-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            background-color: #222; /* Placeholder color if image fails */
+        }
+
+        .button {
+            margin-top: 40px;
+            padding: 15px 40px;
+            background: #ff4d4d;
+            border: none;
+            color: white;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 77, 77, 0.4);
+        }
+    </style>
+</head>
+<body>
     <div id="activityquestion"><b>What are we doing after?</b></div>
-        <div class="activity-item">
-        <img src="sex/sex.png" alt="sex.png" />
-        <label
-          ><input
-            type="checkbox"
-            name="activities"
-            value="park.jpeg"
-          />sex</label
-        >
-      </div>
+    
+    <div class="activity-item">
+        <img src="sex/sex.png" alt="Activity Image" onerror="this.src='https://via.placeholder.com/200?text=Image+Not+Found'">
+        <label style="display: block; font-size: 1.5rem; cursor: pointer;">
+            <input type="checkbox" name="activities" value="sex" style="transform: scale(1.5); margin-right: 10px;"/>
+            Sex
+        </label>
     </div>
+
     <button class="button" onclick="location.href='lastpage.html'">
-      Last page ... 
+        Final Surprise ... 
     </button>
-  </body>
+</body>
 </html>
